@@ -1,0 +1,17 @@
+.projects_container {
+  text-align: center;
+  background-color: brown;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 3%;
+}
+
+.projects_content {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.project {
+  padding-top: 2%;
+  padding-bottom: 1%;
+}

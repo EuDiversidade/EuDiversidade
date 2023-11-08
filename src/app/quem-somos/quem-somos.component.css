@@ -1,0 +1,26 @@
+.whoWeAre_container {
+  background-color: brown;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 3%;
+}
+
+.whoWeAre_content {
+  padding-top: 1%;
+  border-bottom: 2px solid white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.whoWeAre_image {
+  padding-right: 8%;
+}
+
+.whoWeAre_text_content {
+  padding-top: 9%;
+}
+
+.whoWeAre_text, .whoWeAre_image {
+  height: 100%;
+  padding-bottom: 5%;
+}

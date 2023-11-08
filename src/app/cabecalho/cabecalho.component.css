@@ -1,0 +1,30 @@
+.header {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  padding-bottom: 10px;
+  background-image: linear-gradient(black 60%, rgb(5, 5, 5),  rgb(10, 10, 10), rgb(15, 15, 15), transparent 100%);
+  opacity: .9;
+}
+
+hr{
+  width: 85%;
+  align-self: center;
+  color: white;
+}
+
+.header_logo {
+  padding-right: 2%;
+}
+
+.header_content {
+  width: 95%;
+}
+
+.navbar-nav {
+  width: 50%;
+}
+
+.nav-item {
+  padding-right: 4%;
+}
