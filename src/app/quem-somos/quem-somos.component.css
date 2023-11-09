@@ -6,21 +6,65 @@
 }
 
 .whoWeAre_content {
-  padding-top: 1%;
+  display: table;
+}
+
+.whoWeAre_content::content {
   border-bottom: 2px solid white;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  padding-top: 1%;
 }
 
 .whoWeAre_image {
-  padding-right: 8%;
+  padding-bottom: 3%;
+  width: auto;
 }
 
-.whoWeAre_text_content {
-  padding-top: 9%;
+.carousel-item {
+  text-align: center;
 }
 
-.whoWeAre_text, .whoWeAre_image {
-  height: 100%;
+.whoWeAre_text {
   padding-bottom: 5%;
+  width: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  .whoWeAre_image {
+    width: 35%;
+  }
+
+  .whoWeAre_text {    
+    padding-left: 3%;
+    width: 65%;
+  }
+
+  .whoWeAre_text_content {
+    padding-top: 9%;
+  }
+
+  .whoWeAre_text, .whoWeAre_image {
+    float: left;
+    height: 100%;
+    padding-bottom: 5%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .whoWeAre_image {
+    width: 30%;
+  }
+
+  .whoWeAre_text {    
+    padding-left: 3%;
+    width: 70%;
+  }
+
+  .whoWeAre_text_content {
+    padding-top: 9%;
+  }
+
+  .whoWeAre_text, .whoWeAre_image {
+    height: 100%;
+    padding-bottom: 5%;
+  }
 }
