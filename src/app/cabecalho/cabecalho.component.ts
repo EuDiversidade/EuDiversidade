@@ -11,19 +11,12 @@ export class CabecalhoComponent {
   mobile = false
 
   ngOnInit() {
-    if (window.screen.width < 992) {
-      this.mobile = true
-    }
+    this.mobile = window.screen.width < 992 ? true : false
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
-    if (window.innerWidth < 992) {
-      this.mobile = true
-    }
-    else {
-      this.mobile = false
-    }
+    this.mobile = window.innerWidth < 992 ? true : false
   }
 }
 

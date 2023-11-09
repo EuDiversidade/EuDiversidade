@@ -9,6 +9,7 @@
 
 .header_logo {
   padding-right: 2%;
+  padding-top: 10px;
 }
 
 .header_content {
@@ -16,6 +17,10 @@
 }
 
 @media only screen and (min-width: 992px) {
+  .header_logo {
+    padding-top: 0px;
+  }
+
   .header_content {
     width: 95%;
     border-bottom: 1px solid white;
