@@ -1,11 +1,12 @@
 footer {
   height: 30%;
-  width: auto;
+  width: 100%;
   background: black;
 }
 
 .footer_container {
-  display: flex;
+  display: table;
+  width: 100%;
   padding-top: 2%;
   padding-left: 1%;
   padding-right: 1%;
@@ -14,44 +15,63 @@ footer {
 
 li {
   color: white;
-  font-size: large;
-  display: inline;
+  text-align: center;
 }
 
 /*#region Footer-conteudo-esquerdo*/
+.footer_left {
+  float: left;
+  width: 100%;
+}
+
 .footer_left_content {
   display: table;
-  float: left;
-  width: 50%;
+  width: 100%;
   height: 70%;
 }
 
-.footer_logo, .footer_paginas {
-  vertical-align: middle;
-  display: table-row;
-}
-
 .footer_logo {
-  display: table-cell;
-  width: 36%;
-  height: 100px;
+  float: left;
+  padding-top: 17px;
+  margin-right: -30px;
+  width: 140px;
   border-right: 1px solid white;
 }
 
+.footer_logo img {
+  width: 130px;
+  height: 75px;
+}
+
 .footer_paginas {
-  display: table-cell;
+  float: left;
+  padding-top: 40px;
+  width: 65%;
+  height: 100%;
 }
 
 .footer_paginas_decoration {
+  display: inline;
   padding-right: 4%;
   padding-left: 4%;
 }
 /*#endregion*/
 
 /*#region Footer-conteudo-direito*/
+.footer_right {
+  margin-top: 30px;
+  width: 100%;
+  float: left;
+}
+
 .footer_right_content {
-  flex: 1;
-  height: auto;
+  width: auto;
+  float: right;
+}
+
+.footer_contato {
+  width: 100%;
+  padding-right: 5px;
   text-align: right;
 }
 
@@ -61,11 +81,64 @@ button {
   color: white;
   padding: 10px;
   width: 120px;
-  text-align: center;
-  text-decoration: none;
   font-size: large;
   margin: 4px 2px;
   border-radius: 12px;
   font-weight: bold;
 }
+
+.footer_solcialLinks ul {
+  display: inline;
+}
+
+.footer_solcialLinks li {
+  width: 45px;
+  display: inline-block;
+}
+
+.footer_solcialLinks img {
+  width: 25px;
+  height: 25px;
+}
 /*#endregion*/
+
+@media only screen and (max-width: 410px) {
+  li {
+    font-size: small;
+  }
+}
+
+@media only screen and (min-width: 810px) {
+
+  /*#region Footer-conteudo-esquerdo*/
+  .footer_left {
+    width: 77%;
+    float: left;
+  }
+
+  .footer_logo {
+    float: left;
+    padding-top: 10px;
+    width: 210px;
+  }
+  
+  .footer_logo img {
+    width: 200px;
+    height: 115px;
+  }
+
+  .footer_paginas {
+    float: left;
+    padding-top: 50px;
+    width: 60%;
+    height: 100%;
+  }
+  /*#endregion*/
+
+  /*#region Footer-conteudo-direito*/
+  .footer_right {
+    width: 23%;
+    float: left;
+  }
+  /*#endregion*/
+}
