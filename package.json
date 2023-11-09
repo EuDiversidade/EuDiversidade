@@ -22,6 +22,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "angular-cli-ghpages": "^1.0.7",
     "bootstrap": "^4.6.0",
     "jquery": "^3.7.0",
     "rxjs": "~7.5.0",
