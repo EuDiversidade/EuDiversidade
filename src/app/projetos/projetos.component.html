@@ -1,37 +1,27 @@
 <div class="projects_container">
   <h2 style="text-shadow: 2px 4px 4px black; color: white;">Projetos</h2>
   <div class="projects_content">
-    <div id="carrosselProjetos">
-      <carousel [itemsPerSlide]="itemsPerSlide" [interval]="0" [singleSlideOffset]="true" [showIndicators]="false">
-        <slide *ngFor="let projeto of projetos; let i = index" [active]="i === 0" ngClass="{'carousel-item': true'}">
-          <img [src]="projeto.image" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+    <div id="carrosselProjetos" #carrosselProjetos>
+      <div *ngIf="mobile; else desktopTablet">
+        <carousel [isAnimated]="true" [startFromIndex]="projetos.length" [interval]="0" [showIndicators]="false">
+          <slide *ngFor="let projeto of projetos; let i = index" ngClass="{'carousel-item': true'}">
+            <img [src]="projeto.image" class="d-block w-100" alt="...">
+            <div *ngIf="i === projeto.id + 1" class="carousel-caption d-none d-md-block">
               <h3 style="text-shadow: 2px 4px 4px black; color: white;">{{projeto.name}}</h3>
             </div>
-        </slide>
-      </carousel>
+          </slide>
+        </carousel>
+      </div>
+      <ng-template #desktopTablet>
+        <carousel [itemsPerSlide]="3" [interval]="0" [singleSlideOffset]="true" [showIndicators]="false">
+          <slide *ngFor="let projeto of projetos; let i = index" [active]="i === 0" ngClass="{'carousel-item': true'}">
+            <img [src]="projeto.image" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3 style="text-shadow: 2px 4px 4px black; color: white;">{{projeto.name}}</h3>
+              </div>
+          </slide>
+        </carousel>
+      </ng-template>
     </div>
-
-    <!--<div id="carrosselProjetos" #carrosselProjetos class="carousel slide" data-interval="false">
-      <div class="carousel-inner row w-100 mx-auto" role="listbox">
-        <div  *ngFor="let projeto of projetos; let i = index" [ngClass]="{'carousel-item': true, 'col-md-4': true,'active': i === 0}">
-          <img [src]="projeto.image" class="d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-            <h3 style="text-shadow: 2px 4px 4px black; color: white;">{{projeto.name}}</h3>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-target="#carrosselProjetos" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-target="#carrosselProjetos" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </button>
-      <div *ngIf="teste">
-        <h1>{{scrollPosition}}</h1>
-      </div>
-    </div>-->
   </div>
 </div>
