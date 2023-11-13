@@ -1,7 +1,18 @@
 <div class="projects_container">
   <h2 style="text-shadow: 2px 4px 4px black; color: white;">Projetos</h2>
   <div class="projects_content">
-    <div id="carrosselProjetos" #carrosselProjetos class="carousel slide" data-interval="false">
+    <div id="carrosselProjetos">
+      <carousel [itemsPerSlide]="3" [interval]="0" [singleSlideOffset]="true" [showIndicators]="false">
+        <slide *ngFor="let projeto of projetos; let i = index" [active]="i === 0" ngClass="{'carousel-item': true'}">
+          <img [src]="projeto.image" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3 style="text-shadow: 2px 4px 4px black; color: white;">{{projeto.name}}</h3>
+            </div>
+        </slide>
+      </carousel>
+    </div>
+
+    <!--<div id="carrosselProjetos" #carrosselProjetos class="carousel slide" data-interval="false">
       <div class="carousel-inner row w-100 mx-auto" role="listbox">
         <div  *ngFor="let projeto of projetos; let i = index" [ngClass]="{'carousel-item': true, 'col-md-4': true,'active': i === 0}">
           <img [src]="projeto.image" class="d-block w-100">
@@ -21,6 +32,6 @@
       <div *ngIf="teste">
         <h1>{{scrollPosition}}</h1>
       </div>
-    </div>
+    </div>-->
   </div>
 </div>

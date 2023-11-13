@@ -7,7 +7,6 @@
 }
 
 .projects_content {
-  position: relative;
   padding-top: 30px;
   padding-bottom: 30px;
   border-top: 2px solid white;
@@ -15,8 +14,13 @@
 }
 
 #carrosselProjetos {
+  position: relative;
   width: 100vw;
   right: 4.25%;
+}
+
+.carousel-item {
+  margin-right: 0;
 }
 
 .d-block, .w-100 {
@@ -24,36 +28,12 @@
   object-fit: contain;
 }
 
-.carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-  position: absolute;
-  top: 0;
-  right: -33.3333%;  /*change this with javascript in the future*/
-  z-index: -1;
-  display: block;
-  visibility: visible;
+:host ::ng-deep .carousel-control {
+  background-color: white;
+  opacity: 80%;
 }
 
-.carousel-inner .active + .carousel-item + .carousel-item {
-  display: block;
-}
-.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
-  transition: none;
-}
-.carousel-inner .carousel-item-next {
-  position: relative;
-  transform: translate3d(0, 0, 0);
-}
-/* left or forward direction */
-.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-  position: relative;
-  transform: translate3d(-100%, 0, 0);
-  visibility: visible;
-}
-/* right or prev direction */
-.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-  position: relative;
-  transform: translate3d(100%, 0, 0);
-  visibility: visible;
-  display: block;
-  visibility: visible;
+:host ::ng-deep .carousel-control-prev-icon,
+:host ::ng-deep .carousel-control-next-icon {
+  filter: invert(100%);
 }

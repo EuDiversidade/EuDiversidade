@@ -7,7 +7,7 @@ import * as bootstrap from 'bootstrap';
   styleUrls: ['./projetos.component.css']
 })
 export class ProjetosComponent {
-  @ViewChild('carrosselProjetos') carrosselProjetos!: ElementRef;
+  @ViewChild('carrosselProjetos') carrossel!: ElementRef;
 
   carousel: any; // Adjust the type based on the Bootstrap version you are using
   carouselWidth: number = 0;
@@ -17,18 +17,18 @@ export class ProjetosComponent {
 
   projetos = [
     { image: 'assets/Logo-Mind.png', name: 'Mind' },
-    { image: 'assets/Logo-Mind.png', name: 'Mind 2' },
+    { image: 'assets/Logo-EuDiversidade.png', name: 'Mind 2' },
     { image: 'assets/Logo-Mind.png', name: 'Mind 3' },
     { image: 'assets/Logo-Mind.png', name: 'Mind 4' },
     { image: 'assets/Logo-Mind.png', name: 'Mind 5' },
     { image: 'assets/Logo-Mind.png', name: 'Mind 6' },
   ];
-  itemsPerSlide = 5;
+  itemsPerSlide = 3;
 
   constructor(private renderer: Renderer2) {}
 
   ngOnInit(event: any) {
-    const element = this.carrosselProjetos.nativeElement
+    const element = this.carrossel.nativeElement
     const idx = event.relatedTarget.index
     const totalItems = element.querySelectorAll('.carousel-item').length
     
@@ -45,8 +45,8 @@ export class ProjetosComponent {
   }
 
   /*private animateScroll(): void {
-    if (this.carrosselProjetos) {
-      const innerElement = this.carrosselProjetos.nativeElement.querySelector('.carousel-inner');
+    if (this.carrossel) {
+      const innerElement = this.carrossel.nativeElement.querySelector('.carousel-inner');
       this.renderer.setStyle(innerElement, 'scroll-behavior', 'smooth');
       innerElement.scrollLeft = this.scrollPosition;
 
