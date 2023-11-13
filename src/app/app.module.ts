@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProjetosComponent } from './projetos/projetos.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { InicioComponent } from './inicio/inicio.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
