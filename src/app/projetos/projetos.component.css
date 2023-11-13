@@ -29,11 +29,52 @@
 }
 
 :host ::ng-deep .carousel-control {
+  position: absolute;
   background-color: white;
-  opacity: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40%;
+  opacity: .5;
+}
+
+:host ::ng-deep .carousel-control-prev {
+  border-bottom-right-radius: 25%;
+  border-top-right-radius: 25%;
+}
+
+:host ::ng-deep .carousel-control-next {
+  border-bottom-left-radius: 25%;
+  border-top-left-radius: 25%;
 }
 
 :host ::ng-deep .carousel-control-prev-icon,
 :host ::ng-deep .carousel-control-next-icon {
   filter: invert(100%);
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+  #carrosselProjetos {
+    width: 150vw;
+    right: 32%;
+  }
+
+  :host ::ng-deep .carousel-control {
+    width: 100px;
+    opacity: 80%;
+  }
+
+  :host ::ng-deep .carousel-control-prev {
+    left: 17%;
+  }
+
+  :host ::ng-deep .carousel-control-next {
+    right: 16.5%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  :host ::ng-deep .carousel-control {
+    width: 100px;
+    opacity: 80%;
+  }
 }

@@ -2,7 +2,7 @@
   <h2 style="text-shadow: 2px 4px 4px black; color: white;">Projetos</h2>
   <div class="projects_content">
     <div id="carrosselProjetos">
-      <carousel [itemsPerSlide]="3" [interval]="0" [singleSlideOffset]="true" [showIndicators]="false">
+      <carousel [itemsPerSlide]="itemsPerSlide" [interval]="0" [singleSlideOffset]="true" [showIndicators]="false">
         <slide *ngFor="let projeto of projetos; let i = index" [active]="i === 0" ngClass="{'carousel-item': true'}">
           <img [src]="projeto.image" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
